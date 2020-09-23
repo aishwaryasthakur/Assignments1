@@ -54,9 +54,9 @@ public class Hospital implements HospitalServices {
 	}
 
 	@Override
-	public void appointDoctor(String doctorName, String speciality) {
+	public void appointDoctor(Doctor doctor) {
 		// TODO Auto-generated method stub
-		doctors.add(new Doctor(doctorName, speciality));
+		doctors.add(doctor);
 	}
 	
 	@Override
@@ -65,7 +65,7 @@ public class Hospital implements HospitalServices {
 	}
 	
 	@Override
-	public HashSet<Patient> get_patients(String doctorName) {
+	public HashSet<Patient> getPatients(String doctorName) {
 		// TODO Auto-generated method stub
 		HashSet<Patient> patients = new HashSet<>(); 
 
@@ -92,7 +92,6 @@ public class Hospital implements HospitalServices {
 	public HashSet<Patient> cancelAppointment(Doctor doctor, Patient patient) {
 		// TODO Auto-generated method stub
 		HashSet<Patient> patients = appointments.get(doctor);
-		
 		patients.remove(patient);
 		
 		return patients;

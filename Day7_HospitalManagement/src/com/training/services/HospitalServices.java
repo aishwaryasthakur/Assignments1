@@ -12,10 +12,10 @@ public interface HospitalServices {
 	HashSet<Doctor> doctors= new HashSet<>();
 	HashMap<Doctor, HashSet<Patient>> appointments = new HashMap<>();
 	
-	void appointDoctor(String doctorName, String speciality);
+	void appointDoctor(Doctor doctor);
 	HashSet<Doctor> getDoctors();
 	void setAppointment(Doctor doctor, Patient patient);
 	HashSet<Patient> cancelAppointment(Doctor doctor, Patient patient);
-	HashSet<Patient> get_patients(String doctorName);
+	HashSet<Patient> getPatients(String doctorName);
 
 }

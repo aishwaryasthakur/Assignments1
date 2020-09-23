@@ -19,6 +19,9 @@ public class Application {
 		
 		Doctor aishwarya = new Doctor("Aishwarya", "heart specialist");
 		Doctor madhura = new Doctor("Madhura", "gynecologist");
+		
+		sahayadri.appointDoctor(aishwarya);
+		sahayadri.appointDoctor(madhura);
 	
 		Patient madhavi = new Patient("madhvi", 4, "female");
 		Patient abc = new Patient("bhagyashree", 4, "female");
@@ -30,21 +33,21 @@ public class Application {
 		sahayadri.setAppointment(madhura, abc);
 		sahayadri.setAppointment(madhura, madhavi);
 		
-		patients = sahayadri.get_patients("Aishwarya");
+		patients = sahayadri.getPatients("Aishwarya");
 		iterator = patients.iterator();
 		while(iterator.hasNext()){
 	        System.out.println(iterator.next().getPatientName());
 	     }
 	     System.out.println("---");
 		
-		patients = sahayadri.get_patients("Madhura");
+		patients = sahayadri.getPatients("Madhura");
 		iterator = patients.iterator();
 		while(iterator.hasNext()){
 	        System.out.println(iterator.next().getPatientName());
 	     }
 	     System.out.println("---");
 	     sahayadri.cancelAppointment(aishwarya, abc);
-	     patients = sahayadri.get_patients("Aishwarya");
+	     patients = sahayadri.getPatients("Aishwarya");
 		 iterator = patients.iterator();
 		 while(iterator.hasNext()){
 		        System.out.println(iterator.next().getPatientName());
