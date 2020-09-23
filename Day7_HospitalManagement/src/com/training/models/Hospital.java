@@ -93,8 +93,6 @@ public class Hospital implements HospitalServices {
 		// TODO Auto-generated method stub
 		HashSet<Patient> patients = appointments.get(doctor);
 		patients.remove(patient);
-		
-		return patients;
-	        
+		return patients;	        
 	    }
 }

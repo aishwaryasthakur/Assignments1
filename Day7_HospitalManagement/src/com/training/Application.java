@@ -46,8 +46,8 @@ public class Application {
 	        System.out.println(iterator.next().getPatientName());
 	     }
 	     System.out.println("---");
-	     sahayadri.cancelAppointment(aishwarya, abc);
-	     patients = sahayadri.getPatients("Aishwarya");
+	     patients = sahayadri.cancelAppointment(aishwarya, abc);
+	     
 		 iterator = patients.iterator();
 		 while(iterator.hasNext()){
 		        System.out.println(iterator.next().getPatientName());
