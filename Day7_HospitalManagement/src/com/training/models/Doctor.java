@@ -26,6 +26,10 @@ public class Doctor {
 	public void setSpeciality(String speciality) {
 		this.speciality = speciality;
 	}
+	@Override
+	public String toString() {
+		return "Doctor [doctorName=" + doctorName + ", speciality=" + speciality + "]";
+	}
 	
 	
 }

@@ -22,7 +22,14 @@ public class Application {
 		
 		sahayadri.appointDoctor(aishwarya);
 		sahayadri.appointDoctor(madhura);
-	
+		
+		HashSet<Doctor> doctors = sahayadri.getDoctors();
+		Iterator iter = doctors.iterator();
+		while(iter.hasNext()){
+	        System.out.println(iter.next().toString());
+	     }
+	     System.out.println("---");
+	     
 		Patient madhavi = new Patient("madhvi", 4, "female");
 		Patient abc = new Patient("bhagyashree", 4, "female");
 		
